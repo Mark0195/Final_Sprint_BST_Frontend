@@ -3,7 +3,7 @@ package BST;
 import java.util.*;
 
 public class BinaryApp {
-    static BinaryNode<Integer> reconstruct(final int[] values) {
+    public static BinaryNode<Integer> reconstruct(final int[] values) {
         if (values.length == 0) {
             return null;
         }
@@ -27,7 +27,7 @@ public class BinaryApp {
         return newNode;
     }
 
-    static <B> BinaryNode<B> reconstruct(final List<B> preorderValues, final List<B> inorderValues) {
+    public static <B> BinaryNode<B> reconstruct(final List<B> preorderValues, final List<B> inorderValues) {
         if (preorderValues.size() != inorderValues.size())
             throw new IllegalStateException("inputs differ in length");
 
@@ -50,7 +50,7 @@ public class BinaryApp {
         return root;
     }
 
-    static <B> BinaryNode<B> reconstructClearer(final List<B> preorderValues, final List<B> inorderValues) {
+    public static <B> BinaryNode<B> reconstructClearer(final List<B> preorderValues, final List<B> inorderValues) {
         if (preorderValues.size() == 0 || inorderValues.size() == 0) {
             return null;
         }
@@ -84,7 +84,7 @@ public class BinaryApp {
         System.out.println();
     }
 
-    static boolean duplicates(final int[] integers) {
+    public static boolean duplicates(final int[] integers) {
         Set<Integer> lump = new HashSet<Integer>();
         for (int i : integers) {
             if (lump.contains(i)) return true;
